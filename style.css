@@ -1,185 +1,213 @@
+/* ==========================================================================
+   ESTILO GERAL E RESET
+   ========================================================================== */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    background-color: #0b0f19;
-    color: #f3f4f6;
-    min-height: 100vh;
-    padding: 60px 20px;
-    display: flex;
-    justify-content: center;
-    overflow-x: hidden;
-    position: relative;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  background-color: #0b0f19;
+  color: #f3f4f6;
+  min-height: 100vh;
+  padding: 60px 20px;
+  display: flex;
+  justify-content: center;
+  overflow-x: hidden;
+  position: relative;
 }
 
 .container {
-    width: 100%;
-    max-width: 1100px;
-    z-index: 2;
+  width: 100%;
+  max-width: 1140px; /* Ajustado para alinhar melhor o grid de 17 cards */
+  z-index: 2;
 }
 
-/* Luzes de Fundo (Ambiente Cyberpunk/Neon) */
+/* Luzes de Fundo Neon (Efeito Cyberpunk) */
 .glow-sphere {
-    position: absolute;
-    border-radius: 50%;
-    filter: blur(120px);
-    z-index: 1;
-    pointer-events: none;
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(120px);
+  z-index: 1;
+  pointer-events: none;
 }
+
 .glow-1 {
-    width: 500px;
-    height: 500px;
-    background: radial-gradient(circle, rgba(99, 102, 241, 0.15) 0%, transparent 70%);
-    top: -10%;
-    right: -5%;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(6, 182, 212, 0.15) 0%, transparent 70%);
+  top: -10%;
+  right: -5%;
 }
+
 .glow-2 {
-    width: 400px;
-    height: 400px;
-    background: radial-gradient(circle, rgba(217, 70, 239, 0.1) 0%, transparent 70%);
-    bottom: 10%;
-    left: -10%;
-}
-
-/* Cabeçalho */
-header {
-    text-align: center;
-    margin-bottom: 60px;
-}
-
-.back-link {
-    color: #94a3b8;
-    text-decoration: none;
-    font-size: 0.9rem;
-    font-weight: 500;
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    margin-bottom: 24px;
-    padding: 8px 16px;
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    border-radius: 100px;
-    transition: all 0.2s ease;
-}
-.back-link:hover {
-    color: #ffffff;
-    background: rgba(255, 255, 255, 0.08);
-    border-color: rgba(255, 255, 255, 0.15);
-}
-
-h1 {
-    font-size: 2.8rem;
-    font-weight: 800;
-    letter-spacing: -0.04em;
-    background: linear-gradient(135deg, #ffffff 30%, #94a3b8 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-header p {
-    color: #64748b;
-    margin-top: 10px;
-    font-size: 1.1rem;
-    font-weight: 400;
-}
-
-/* Grid Layout */
-.projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 30px;
-}
-
-/* Card Principal (Efeito Vidro Jateado Avançado) */
-.project-card {
-    text-decoration: none;
-    color: #ffffff;
-    position: relative;
-    border-radius: 28px;
-    background: rgba(17, 24, 39, 0.45);
-    border: 1px solid rgba(255, 255, 255, 0.06);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    padding: 32px;
-    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
-}
-
-/* Estrutura interna para empurrar a seta para baixo */
-.card-inner {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 100%;
-    min-height: 200px;
-}
-
-.project-icon {
-    font-size: 2.4rem;
-    margin-bottom: 20px;
-    background: rgba(255, 255, 255, 0.03);
-    width: 60px;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 16px;
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    transition: transform 0.3s ease;
-}
-
-.project-info h3 {
-    font-size: 1.4rem;
-    font-weight: 700;
-    margin-bottom: 8px;
-    letter-spacing: -0.02em;
-}
-
-.project-info p {
-    font-size: 0.9rem;
-    color: #94a3b8;
-    line-height: 1.5;
-}
-
-.arrow-indicator {
-    align-self: flex-start;
-    font-size: 0.9rem;
-    font-weight: 600;
-    color: #64748b;
-    margin-top: 24px;
-    transition: all 0.3s ease;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(99, 102, 241, 0.1) 0%, transparent 70%);
+  bottom: 10%;
+  left: -10%;
 }
 
 /* ==========================================================================
-   Efeitos de Hover Individuais (Cores Neon Temáticas para cada projeto)
+   CABEÇALHO
    ========================================================================== */
+header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.back-link {
+  color: #94a3b8;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 24px;
+  padding: 8px 16px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 100px;
+  transition: all 0.2s ease;
+}
+
+.back-link:hover {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+h1 {
+  font-size: 2.8rem;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  background: linear-gradient(135deg, #ffffff 30%, #94a3b8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+header p {
+  color: #64748b;
+  margin-top: 10px;
+  font-size: 1.1rem;
+  font-weight: 400;
+}
+
+/* ==========================================================================
+   GRID LAYOUT (Alinhamento para 17 cards)
+   ========================================================================== */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* Reduzido levemente para encaixar melhor em resoluções padrão */
+  gap: 25px;
+}
+
+/* ==========================================================================
+   ESTRUTURA BASE DO CARD (Efeito Vidro Jateado)
+   ========================================================================== */
+.project-card {
+  text-decoration: none;
+  color: #ffffff;
+  position: relative;
+  border-radius: 24px; /* Ajustado proporcionalmente */
+  background: rgba(17, 24, 39, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  padding: 28px; /* Ajustado proporcionalmente */
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+}
 
 .project-card:hover {
-    transform: translateY(-6px);
-    background: rgba(17, 24, 39, 0.65);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  transform: translateY(-6px);
+  background: rgba(17, 24, 39, 0.65);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
 }
+
+/* Estrutura interna para empurrar elementos */
+.card-inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  min-height: 200px;
+}
+
+.project-icon {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+  background: rgba(255, 255, 255, 0.03);
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: transform 0.3s ease;
+}
+
 .project-card:hover .project-icon {
-    transform: scale(1.05);
+  transform: scale(1.05);
 }
 
-/* Hover: Coca Cola (Vermelho) */
-.card-coca:hover { border-color: #ef4444; }
-.card-coca:hover .arrow-indicator { color: #ef4444; }
+.project-info h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  letter-spacing: -0.02em;
+}
 
-/* Hover: Projeto Final (Dourado/Amarelo) */
-.card-final:hover { border-color: #f59e0b; }
-.card-final:hover .arrow-indicator { color: #f59e0b; }
+.project-info p {
+  font-size: 0.9rem;
+  color: #94a3b8;
+  line-height: 1.5;
+}
 
-/* Hover: Projetos Gerais (Azul Ciano) */
+.arrow-indicator {
+  align-self: flex-start;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #64748b;
+  margin-top: 24px;
+  transition: all 0.3s ease;
+}
+
+/* ==========================================================================
+   CORES INDIVIDUAIS DOS SEUS CARDS (Efeitos Neon)
+   ========================================================================== */
+/* Azul Ciano (Geral / Padrão) */
 .card-geral:hover { border-color: #06b6d4; }
 .card-geral:hover .arrow-indicator { color: #06b6d4; }
 
-/* Hover: Termo (Roxo/Rosa) */
+/* Vermelho (Coca-Cola) */
+.card-coca:hover { border-color: #ef4444; }
+.card-coca:hover .arrow-indicator { color: #ef4444; }
+
+/* Dourado (Projeto Final) */
+.card-final:hover { border-color: #f59e0b; }
+.card-final:hover .arrow-indicator { color: #f59e0b; }
+
+/* Roxo Termo (Termo) */
 .card-termo:hover { border-color: #d946ef; }
 .card-termo:hover .arrow-indicator { color: #d946ef; }
+
+/* Verde Neon */
+.card-verde:hover { border-color: #22c55e; }
+.card-verde:hover .arrow-indicator { color: #22c55e; }
+
+/* Laranja Chama */
+.card-laranja:hover { border-color: #f97316; }
+.card-laranja:hover .arrow-indicator { color: #f97316; }
+
+/* Rosa Choque */
+.card-rosa:hover { border-color: #ec4899; }
+.card-rosa:hover .arrow-indicator { color: #ec4899; }
+
+/* Roxo Cyberpunk / Indigo (Nova variação para fechar a paleta dos 17) */
+.card-indigo:hover { border-color: #6366f1; }
+.card-indigo:hover .arrow-indicator { color: #6366f1; }

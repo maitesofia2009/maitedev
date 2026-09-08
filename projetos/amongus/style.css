@@ -1,0 +1,14 @@
+.container {
+    position relative;
+    width: 750px;
+}
+
+.icone {
+position absolute;
+}
+
+.icone-01 {
+ left: 90px;
+ top: 40px;
+
+}

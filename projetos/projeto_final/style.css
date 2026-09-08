@@ -1,0 +1,379 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #0A1B2D;
+    font-family: 'Inter', sans-serif;
+}
+
+.header {
+    background-color: #081728;
+    height: 130px;
+    width: 1366px;
+    
+}
+
+.texto {
+    color: white;
+    width: 273px;
+    top: 110px;
+    left: 640px;
+    position: relative;
+}
+
+.janela {
+    width: 245px;
+    height: 80px;
+    position: absolute;
+    left: 390px;
+    top: 21px;
+}
+
+.among-03 {
+    position: absolute;
+    width: 85px;
+    height: 130px;
+    left: 530px;
+    top: 6px;
+}
+
+.painel {
+    position: absolute;
+    width: 200px;
+    height: 180px;
+    left: 1160px;
+    top: 0px;
+}
+
+.return {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    left: 1325px;
+    top: 10px;
+    cursor: pointer;
+}
+
+.container {
+    top: 140px;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    border: 3px solid black;
+    border-radius: 10px;
+    background-color: #081625;
+}
+
+.botoes {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.inputPalavra {
+    width: 300px;
+    height: 50px;
+    background-color: #081728;
+    color: #fdfdfd;
+    border: 3px solid #2B4056;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 20px;
+}
+
+.btnEnviar {
+    background-color: #2B4056;
+    border: 3px solid #06111F;
+    color: #06111F;
+    width: 300px;
+    height: 40px;
+    border-radius: 10px;
+    font-size: 20px;
+    text-align: center;
+    font-weight: 700;
+}
+
+.btnEnviar:hover {
+    background-color: #06111F;
+    border: 3px solid #2B4056;
+    color: #2B4056;
+}
+
+
+.palavras {
+    width: 100px;
+    height: 200px;
+    display: flex;
+    flex-direction: row;
+}
+
+.linha {
+    display: flex;
+    padding: 5px;
+    justify-content: space-between;
+}
+
+.quadro {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.casa {
+    width: 50px;
+    height: 50px;
+    color: white ;
+    background-color: #06111F;
+    border: 3px solid #2B4056;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 34px;
+    line-height: 41px;
+    color: #ffffff;
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+}
+
+.acerto {
+    background-color: #238C49;
+    border: 3px solid #238C49;
+}
+
+.erro {
+    background-color: #CB9D21;
+    border: 3px solid #CB9D21;    
+}
+
+.azul {
+    background-color: #06111F;
+}
+
+.tentativas {
+    background-color: #0A1B2D;
+    width: 170px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    color: #9FB5C9 ;
+    font-size: 12px;
+    padding: 5px;
+    border-radius: 4px;
+    font-family: Arial, Helvetica, sans-serif;
+    border: 3px solid #06111F;
+    border-radius: 10px;
+    top: -10px;
+    position: relative;
+    transform: translateX(70%);
+    }
+
+.card {
+    display: flex;
+    position: absolute;
+    left: 622px;
+    top: 15px;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.card span {
+    font-size: 35px;
+    color: #2B4056;
+    font-size: 50px;
+}
+
+.contador {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5px;
+    left: 0px;
+    font: "Inter";
+}
+
+h2 {
+    gap: 4px;
+}
+
+.btnReiniciar {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 15px;
+    right: 50px;
+    cursor: pointer;
+}
+
+.container1 {
+    position: relative;
+    background-size: cover;
+    width: 1900px;
+    height: 650px;
+}
+
+.fundoVitoria {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    right: 0;
+    top: 0;
+    background-image: url("./assets/background-victory.png");
+    background-size: cover;
+    background-position: center;
+}
+
+
+.container1 h1 {
+    position: absolute;
+    width: 100%;
+    top: 150px;
+    right: 70px;
+    text-align: center;
+    font-size: 50px;
+    color: #00C0DD;
+}
+
+
+.container2 {
+    position: relative;
+    background-size: cover;
+    width: 1440px;
+    height: 640px;
+}
+
+.container2 h1 {
+    position: absolute;
+    font-size: 70px;
+    width: 100%;
+    top: 80px;
+    left: 0;
+    text-align: center;
+    color: #DE0000;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal.is-active {
+    display: flex;
+}
+
+.among {
+    width: 85px;
+    height: 130px;
+    left: 530px;
+    top: 6px;
+}
+
+.fundoVitoria {
+    position: fixed;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    right: 82px;
+    top: 0;
+}
+
+.bonecoVitoria {
+    position: absolute;
+    width: 150px;
+    left: 530px;
+    top: 250px;
+}
+
+
+.fundoDerrota {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+}
+
+.bonecoDerrota {
+    position: absolute;
+    width: 150px;
+    left: 605px;
+    top: 180px;
+}
+
+@media (max-width: 1366px) {
+  .header {
+    width: 100%; } }
+
+    @media (max-width: 768px) {
+  .header {
+    height: auto;
+    min-height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  } }
+  
+  .container {
+    position: relative;
+    top: 20px;
+    left: 0;
+    transform: none;
+    margin: 0 auto;
+    width: 95%;
+    max-width: 340px;
+  }
+  .inputPalavra, .btnEnviar {
+    width: 100%; 
+  }
+  .casa {
+    width: 45px;
+    height: 45px;
+    font-size: 26px;
+  }
+
+
+  .container1, .container2 {
+    width: 100%;
+    height: auto;
+    min-height: 100vh;
+    padding: 20px;
+  }
+  .container1 h1, .container2 h1 {
+    position: static;
+    font-size: 32px;
+    margin-top: 40px;
+  }
+  .bonecoVitoria, .bonecoDerrota {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 20px;
+    display: block;
+  }
+
+  .fundoDerrota {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+}
+
+ 
+

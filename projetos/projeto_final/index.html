@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header">
+        <img src="./assets/janela.png" class="janela" alt="">
+        <img src="./assets/among-03.png" class="among-03" alt="">
+        <p class="texto">Adivinhe a palavra secreta de 5 letras.</p>
+        <div class="card">
+            <div class="tentativas">
+                <h2>TENTATIVAS</h2>
+            </div>
+            <div class="contador">
+                <span class="usadas">0</span>
+                <span class="limite">/6</span>
+            </div>
+        </div>
+        <img src="./assets/painel.png" class="painel" alt="">
+        <img src="./assets/return.png" class="return" alt="">
+    </div>
+    
+    <div class="container">
+        <div class="botoes">
+            <input class="inputPalavra" type="text" placeholder="Digite uma Palavra..." maxlength="5">
+            <button class="btnEnviar">ENVIAR</button>
+        </div>
+
+        <div class="quadro"></div>
+    </div>
+
+    <div id="modalVitoria" class="modal">
+        <div class="container1">
+            <img src="./assets/background-victory.png" class="fundoVitoria" alt="">
+                <h1>Vitória</h1>
+            <img src="./assets/among-03.png" class="bonecoVitoria" alt="">
+            <img src="./assets/close.png" class="btnReiniciar" alt="Fechar">
+        </div>
+    </div>
+    
+    <div id="modalDerrota" class="modal">
+        <div class="container2">
+            <img src="./assets/background-defeat.png" class="fundoDerrota" alt="">
+            <h1>Derrota</h1>
+            <img src="./assets/among-03.png" class="bonecoDerrota" alt="">
+            <img src="./assets/close.png" class="btnReiniciar" alt="Fechar">
+        </div>
+    </div>   
+    <script src="script.js"></script>
+</body>
+</html>
